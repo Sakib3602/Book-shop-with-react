@@ -12,6 +12,7 @@ import Error from './components/Error';
 import List from './components/List';
 import ChartPage from './components/ChartPage';
 import Story from './components/Story';
+import About from './components/About';
 
 
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path : "/chartPage",
         element : <ChartPage></ChartPage>,
+      },
+      {
+        path : "/about",
+        element : <About></About>,
       },
       {
         path : "/story",

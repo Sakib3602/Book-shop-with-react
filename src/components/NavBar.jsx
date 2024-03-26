@@ -38,7 +38,10 @@ const NavBar = () => {
               <li>
                 <NavLink to={"/story"}>Story's</NavLink>
               </li>
-              s
+              <li>
+                <NavLink to={"/about"}>About</NavLink>
+              </li>
+              
             </ul>
           </div>
           <Link to={"/"}><h1 className="  text-3xl font-[700]">BOOK-SHOP</h1></Link>
@@ -92,6 +95,18 @@ const NavBar = () => {
                 }
               >
                 Story's
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/about"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-2 border-[#23BE0A] text-[#23BE0A] font-[700]"
+                    : "font-[500] bg-white"
+                }
+              >
+                About Us
               </NavLink>
             </li>
           </ul>
