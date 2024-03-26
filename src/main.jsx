@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import MainHome from './components/MainHome';
 import Home from './components/Home';
+import Details from './components/Details';
 
 
 
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+       loader : ()=>fetch("fake.json")
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader : ()=>fetch("fake.json")
       },
     ]
   },
