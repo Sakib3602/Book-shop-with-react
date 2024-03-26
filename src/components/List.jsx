@@ -1,7 +1,25 @@
 import { FaAngleDown } from "react-icons/fa6";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SecondCard from "./SecondCard";
 const List = () => {
+
+  let localData1 = JSON.parse(localStorage.getItem("readItem"))
+  let localData2 = JSON.parse(localStorage.getItem("wishItem"))
+
+  console.log(localData1, " +++" , localData2)
+
+
+
+
+
+
+
+
+
+
+
+  // start
   return (
     <div>
       <div className="h-[80px] text-center bg-gray-300 rounded-3xl">
@@ -33,12 +51,15 @@ const List = () => {
       <div className="mt-8">
         <Tabs>
           <TabList>
-            <Tab>Title 1</Tab>
-            <Tab>Title 2</Tab>
+            <Tab>Read Books</Tab>
+            <Tab>Wish List Books</Tab>
           </TabList>
 
           <TabPanel>
-            <h2>Any content 1</h2>
+            {
+              localData1.map((e,i)=> <SecondCard key={i} e={e}></SecondCard>)
+            }
+            
           </TabPanel>
           <TabPanel>
             <h2>Any content 2</h2>
