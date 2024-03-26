@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoMdPeople } from "react-icons/io";
 import { SiPowerpages } from "react-icons/si";
+import { Link } from "react-router-dom";
 const SecondCard = ({ e }) => {
   const {
     image,
@@ -23,7 +24,7 @@ const SecondCard = ({ e }) => {
             <img
               src={image}
               alt=""
-              className="  w-[500px] lg:h-[175px] rounded "
+              className="  w-[500px] lg:h-[185px] rounded "
             />
           </div>
           <div className="flex flex-col space-y-2 ">
@@ -57,12 +58,12 @@ const SecondCard = ({ e }) => {
 
               <hr />
 
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center pt-2 space-x-2">
                 
 
-                <button className=" h-9 rounded-3xl btn-active btn-secondary">Category : {category}</button>
-                <button className=" h-9 rounded-3xl btn-active btn-secondary">Ratings : {rating}</button>
-                <button className=" h-9 rounded-3xl btn-active btn-success">View Details</button>
+                <button className=" h-9 w-[200px] rounded-3xl btn-active btn-secondary">Category : {category}</button>
+                <button className=" h-9 rounded-3xl btn-active btn-secondary w-[150px]">Ratings : {rating}</button>
+                <Link to={`/details/${bookId}`}><button className="w-[150px] text-white h-9 rounded-3xl btn-active btn-success">View Details</button></Link>
 
               </div>
              

@@ -2,6 +2,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import SecondCard from "./SecondCard";
+import ThirdCard from "./ThirdCard";
 const List = () => {
 
   let localData1 = JSON.parse(localStorage.getItem("readItem"))
@@ -62,7 +63,9 @@ const List = () => {
             
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            {
+              localData2.map((e,i)=> <ThirdCard key={i} e={e}></ThirdCard>)
+            }
           </TabPanel>
         </Tabs>
       </div>

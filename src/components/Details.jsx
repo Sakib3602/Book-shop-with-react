@@ -1,9 +1,12 @@
+import { useState } from "react";
 import {  useLoaderData, useParams } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Details = () => {
 
+
+  const [hid,setHid] = useState(true)
     const use1 = useLoaderData()
     const {id} = useParams()
     const use = use1.find(b => b.bookId === parseInt(id))
@@ -11,6 +14,7 @@ const Details = () => {
     console.log(use)
 
     function read(){
+      setHid(false)
       let r1 = JSON.parse(localStorage.getItem("readItem")) || [];
       const dataEx = r1.find(r => r.bookId == use.bookId)
       if(dataEx){
@@ -28,11 +32,12 @@ const Details = () => {
       let w1 = JSON.parse(localStorage.getItem("wishItem")) || [];
       const dataEx = w1.find(w => w.bookId == use.bookId);
       if(dataEx){
-        alert("you allready add in wishlist Check your wish list")
+        toast( "You All-Ready Add In Wish!!");
       }else{
         w1.push(use)
         const localValue = JSON.stringify(w1)
         localStorage.setItem("wishItem",localValue)
+        toast("Wish Item Added !!");
       }
     }
 
@@ -62,7 +67,7 @@ const Details = () => {
 
 
             <button onClick={read} className="mt-7 btn border-2 border-solid border-gray-400 text-black">Read</button>
-            <button onClick={wish} className="btn ml-4 bg-[#50B1C9] text-white">Wishlist</button>
+            <button onClick={wish} className={`${(!hid)? "disabled:opacity-75" : " "}  btn ml-4 bg-[#50B1C9] text-white`}>Wishlist</button>
 
         </div>
         
