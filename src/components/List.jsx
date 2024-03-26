@@ -39,12 +39,16 @@ const List = () => {
           tabIndex={0}
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li>
-            <a>Item 1</a>
+          <li className="mt-4 text-[18px]  font-[600] cursor-pointer p-3">
+           Rating
           </li>
-          <li>
-            <a>Item 2</a>
+          <li className="mt-4 text-[18px] font-[600] cursor-pointer p-3" >
+           Number Of Page
           </li>
+          <li className="mt-4 text-[18px] font-[600] cursor-pointer p-3" >
+           Published Year
+          </li>
+          
         </ul>
       </div>
 

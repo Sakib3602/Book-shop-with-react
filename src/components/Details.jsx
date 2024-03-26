@@ -67,7 +67,7 @@ const Details = () => {
 
 
             <button onClick={read} className="mt-7 btn border-2 border-solid border-gray-400 text-black">Read</button>
-            <button onClick={wish} className={`${(!hid)? "disabled:opacity-75" : " "}  btn ml-4 bg-[#50B1C9] text-white`}>Wishlist</button>
+            <button onClick={wish} className={`${(!hid)? "disabled:opacity-75 btn ml-4  text-white " : "btn ml-4 bg-[#50B1C9] text-white "}  `}>Wishlist</button>
 
         </div>
         

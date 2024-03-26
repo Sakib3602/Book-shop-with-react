@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Details from './components/Details';
 import Error from './components/Error';
 import List from './components/List';
+import ChartPage from './components/ChartPage';
 
 
 
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainHome></MainHome>,
-    // errorElement : <Error></Error>,
+    errorElement : <Error></Error>,
     children: [
       {
         path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path : "/listedbook",
         element : <List></List>
+      },
+      {
+        path : "/chartPage",
+        element : <ChartPage></ChartPage>,
       },
     ]
   },

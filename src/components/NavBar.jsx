@@ -33,22 +33,23 @@ const NavBar = () => {
                 <NavLink to={"/listedbook"}>Listed Book</NavLink>
               </li>
               <li>
-                <NavLink to={"/pagestoread"}>Pages To Read</NavLink>
+                <NavLink to={"/chartPage"}>Pages To Read</NavLink>
               </li>
               s
             </ul>
           </div>
-          <a className="btn btn-ghost text-3xl font-[700]">BOOKI-MAN</a>
+          <Link to={"/"}><h1 className="  text-3xl font-[700]">BOOK-SHOP</h1></Link>
+          
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-[700]">
             <li>
               <NavLink
-                to={"/home"}
+                to={"/"}
                 className={({ isActive }) =>
                   isActive
                     ? "border-2 border-[#23BE0A] text-[#23BE0A] font-[700]"
-                    : "font-[500]"
+                    : "font-[500] bg-white"
                 }
               >
                 Home
@@ -60,7 +61,7 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   isActive
                     ? "border-2 border-[#23BE0A] text-[#23BE0A] font-[700]"
-                    : "font-[500]"
+                    : "font-[500] bg-white"
                 }
               >
                 Listed Book
@@ -68,11 +69,11 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to={"/pagestoread"}
+                to={"/chartPage"}
                 className={({ isActive }) =>
                   isActive
                     ? "border-2 border-[#23BE0A] text-[#23BE0A] font-[700]"
-                    : "font-[500]"
+                    : "font-[500] bg-white"
                 }
               >
                 Pages To Read
