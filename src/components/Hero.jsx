@@ -13,7 +13,7 @@ const Hero = () => {
             <h1 className="text-5xl font-bold leading-loose">Books To Freshen <br />
             Up Your Bookshelf</h1>
            
-          <Link >  <button className="btn bg-[#23BE0A] text-white mt-5">View The List</button></Link>
+          <Link to={"/listedbook"}>  <button className="btn bg-[#23BE0A] text-white mt-5">View The List</button></Link>
           </div>
         </div>
       </div>

@@ -29,7 +29,8 @@ const Details = () => {
     }
 
     function wish(){
-      let w1 = JSON.parse(localStorage.getItem("wishItem")) || [];
+      if(hid){
+        let w1 = JSON.parse(localStorage.getItem("wishItem")) || [];
       const dataEx = w1.find(w => w.bookId == use.bookId);
       if(dataEx){
         toast( "You All-Ready Add In Wish!!");
@@ -38,6 +39,10 @@ const Details = () => {
         const localValue = JSON.stringify(w1)
         localStorage.setItem("wishItem",localValue)
         toast("Wish Item Added !!");
+      }
+      }
+      else{
+        toast("You Read this.");
       }
     }
 

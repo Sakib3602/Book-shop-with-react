@@ -35,6 +35,9 @@ const NavBar = () => {
               <li>
                 <NavLink to={"/chartPage"}>Pages To Read</NavLink>
               </li>
+              <li>
+                <NavLink to={"/story"}>Story's</NavLink>
+              </li>
               s
             </ul>
           </div>
@@ -77,6 +80,18 @@ const NavBar = () => {
                 }
               >
                 Pages To Read
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/story"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "border-2 border-[#23BE0A] text-[#23BE0A] font-[700]"
+                    : "font-[500] bg-white"
+                }
+              >
+                Story's
               </NavLink>
             </li>
           </ul>

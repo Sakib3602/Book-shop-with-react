@@ -11,6 +11,7 @@ import Details from './components/Details';
 import Error from './components/Error';
 import List from './components/List';
 import ChartPage from './components/ChartPage';
+import Story from './components/Story';
 
 
 
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path : "/chartPage",
         element : <ChartPage></ChartPage>,
+      },
+      {
+        path : "/story",
+        element : <Story></Story>,
+        loader : ()=> fetch("story.json")
       },
     ]
   },
