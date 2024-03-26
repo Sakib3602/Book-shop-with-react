@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { IoStar } from "react-icons/io5";
 const FirstCard = ({e}) => {
 
     const {image,tags,bookName,author,bookId} = e
@@ -34,7 +34,9 @@ const FirstCard = ({e}) => {
           <div className="flex justify-between">
             <h1>Fiction</h1>
 
-            <h1>5.00 </h1>
+            <div>
+            <h1  className="flex  items-center">5.00 <IoStar ></IoStar></h1>
+            </div>
             
           </div>
         </div>
