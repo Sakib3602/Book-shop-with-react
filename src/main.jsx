@@ -25,12 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-       loader : ()=>fetch("fake.json")
+       loader : ()=>fetch("/fake.json")
       },
       {
         path: "/details/:id",
         element: <Details></Details>,
-        loader : ()=>fetch("fake.json")
+        loader : ()=>fetch("/fake.json")
       },
       {
         path : "/listedbook",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path : "/story",
         element : <Story></Story>,
-        loader : ()=> fetch("story.json")
+        loader : ()=> fetch("/story.json")
       },
     ]
   },

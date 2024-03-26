@@ -3,10 +3,18 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import SecondCard from "./SecondCard";
 import ThirdCard from "./ThirdCard";
+import { useEffect, useState } from "react";
 const List = () => {
 
-  let localData1 = JSON.parse(localStorage.getItem("readItem"))
-  let localData2 = JSON.parse(localStorage.getItem("wishItem"))
+  const [localData1,setLocalData1] = useState([])
+  const [localData2,setLocalData2] = useState([])
+
+  useEffect(()=>{
+    let l1 = JSON.parse(localStorage.getItem("readItem")) || []
+    let l2 = JSON.parse(localStorage.getItem("wishItem")) || []
+    setLocalData1(l1)
+    setLocalData2(l2)
+  },[])
 
   console.log(localData1, " +++" , localData2)
 
