@@ -114,7 +114,7 @@ const NavBar = () => {
         <div className="navbar-end space-x-5">
           <Link>
             <button className="bg-[#23BE0A] text-white w-[116px] h-[47px] rounded-lg">
-              Log In
+              Sign In
             </button>
           </Link>
           <Link>

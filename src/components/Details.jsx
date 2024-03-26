@@ -65,10 +65,10 @@ const Details = () => {
 
             <hr  className="p-4 mt-5 "/>
 
-            <h1 className="mt-3">Number Of Pages : </h1>
-            <h1  className="mt-3">Publisher : </h1>
-            <h1  className="mt-3">Year of Publishing : </h1>
-            <h1  className="mt-3">Rating : 5.00</h1>
+            <h1 className="mt-3">Number Of Pages : {use.totalPages}</h1>
+            <h1  className="mt-3">Publisher : {use.publisher}</h1>
+            <h1  className="mt-3">Year of Publishing : {use.yearOfPublishing}</h1>
+            <h1  className="mt-3">Rating : {use.rating}</h1>
 
 
             <button onClick={read} className="mt-7 btn border-2 border-solid border-gray-400 text-black">Read</button>
