@@ -8,6 +8,8 @@ import {
 import MainHome from './components/MainHome';
 import Home from './components/Home';
 import Details from './components/Details';
+import Error from './components/Error';
+import List from './components/List';
 
 
 
@@ -15,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainHome></MainHome>,
-
+    errorElement : <Error></Error>,
     children: [
       {
         path: "/",
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <Details></Details>,
         loader : ()=>fetch("fake.json")
+      },
+      {
+        path : "/listedbook",
+        element : <List></List>
       },
     ]
   },

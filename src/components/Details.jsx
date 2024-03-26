@@ -1,6 +1,6 @@
 import {  useLoaderData, useParams } from "react-router-dom"
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Details = () => {
 
@@ -14,11 +14,12 @@ const Details = () => {
       let r1 = JSON.parse(localStorage.getItem("readItem")) || [];
       const dataEx = r1.find(r => r.bookId == use.bookId)
       if(dataEx){
-        alert("already data is here")
+        toast("Your All Ready Read This! Check Read List");
       }else{
         r1.push(use)
         let localValue = JSON.stringify(r1)
         localStorage.setItem("readItem",localValue)
+        toast("Read Item Added !!");
       }
 
     }
@@ -65,7 +66,7 @@ const Details = () => {
 
         </div>
         
-      
+        <ToastContainer />
     </div>
   )
 }
