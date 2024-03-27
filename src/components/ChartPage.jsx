@@ -15,7 +15,7 @@ const getPath = (x, y, width, height) => {
 const ChartPage = () => {
 
 
-    const localData = JSON.parse(localStorage.getItem("readItem"))
+    const localData = JSON.parse(localStorage.getItem("readItem")) || []
     console.log(localData,"ksjci")
 
       
