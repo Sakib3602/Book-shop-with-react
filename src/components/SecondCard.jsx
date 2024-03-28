@@ -52,7 +52,7 @@ const SecondCard = ({ e }) => {
                 </span>
                 <span className="text-gray-700 ml-10 text-[18px] flex items-center">
                   <SiPowerpages></SiPowerpages>
-                  <span className="ml-3"> Pages</span> : {publisher}
+                  <span className="ml-3"> Pages</span> : {totalPages}
                 </span>
               </span>
 

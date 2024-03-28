@@ -7,7 +7,9 @@ const Details = () => {
 
 
   const [hid,setHid] = useState(true)
+
     const use1 = useLoaderData()
+    
     const {id} = useParams()
     const use = use1.find(b => b.bookId === parseInt(id))
 

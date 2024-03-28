@@ -22,6 +22,38 @@ const List = () => {
   console.log(localData1, " +++" , localData2)
 
 
+  // sorting........................
+
+  function rating(){
+  const newData = [...localData1]
+  newData.sort((a,b)=> b.rating - a.rating)
+  setLocalData1([...newData])
+
+  const newData1 = [...localData2]
+  newData1.sort((a,b)=> b.rating - a.rating)
+  setLocalData2([...newData1])
+  }
+
+  function pages(){
+    const newData = [...localData1]
+    newData.sort((a,b)=> b.totalPages - a.totalPages)
+    setLocalData1([...newData])
+
+    const newData1 = [...localData2]
+    newData1.sort((a,b)=> b.totalPages - a.totalPages)
+    setLocalData2([...newData1])
+  }
+  function year(){
+    const newData = [...localData1]
+    newData.sort((a,b)=> b.yearOfPublishing - a.yearOfPublishing)
+    setLocalData1([...newData])
+
+    const newData1 = [...localData2]
+    newData1.sort((a,b)=> b.yearOfPublishing - a.yearOfPublishing)
+    setLocalData2([...newData1])
+  }
+
+
 
 
   // start
@@ -43,15 +75,15 @@ const List = () => {
           tabIndex={0}
           className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li className="mt-4 text-[18px]  font-[600] cursor-pointer p-3">
+          <button onClick={rating} className="mt-4 text-[18px]  font-[600] cursor-pointer p-3">
            Rating
-          </li>
-          <li className="mt-4 text-[18px] font-[600] cursor-pointer p-3" >
+          </button>
+          <button onClick={pages} className="mt-4 text-[18px] font-[600] cursor-pointer p-3" >
            Number Of Page
-          </li>
-          <li className="mt-4 text-[18px] font-[600] cursor-pointer p-3" >
+          </button>
+          <button onClick={year} className="mt-4 text-[18px] font-[600] cursor-pointer p-3" >
            Published Year
-          </li>
+          </button>
           
         </ul>
       </div>
